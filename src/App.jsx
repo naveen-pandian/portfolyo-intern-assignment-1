@@ -4,7 +4,7 @@ import Home from './pages/Home';
 
 function App() {
     return (
-        <Router basename='/portfolyo-intern-assignment-1'>
+        <Router>
         <Routes>
             <Route path="/" element={<Home />} />
             {/* <Route path="/:user" element={<Home />} /> */}
