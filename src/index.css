@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    html{
+        @apply scroll-smooth
+    }
+    body{
+        @apply  min-h-screen my-[20px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 flex flex-col items-center justify-center p-4
+    }
+    .circle{
+        @apply fixed z-[-10] content-['']  w-[900px] h-[900px] bg-gradient-to-b from-[#ffc107] to-[#e91e63] rounded-[50%] translate-x-[-700px] translate-y-[-380px] 
+      }
+    .wcircle{
+        @apply fixed  rounded-full backdrop-filter backdrop-blur-xl bg-white/30 shadow-xl  
+    }
+     .box{
+        @apply relative bg-[rgba(255,255,255,0.1)] shadow-[0_25px_45px_rgba(0,0,0,0.1)] border border-[rgba(255,255,255,0.5)] border-r-[rgba(255,255,255,0.2)] border-b-[rgba(255,255,255,0.2)] rounded-[10px]
+               backdrop-blur-[25px] p-[20px]
+    }
+
+    .box h3{
+        @apply text-white 
+    }
+    .box .list{
+        @apply relative  flex  bg-[rgba(0,0,0,0.1)] rounded-[10px] cursor-pointer duration-[0.5s]
+               overflow-hidden
+    }
+    .box .list:hover{
+        @apply bg-[#fff] shadow-[-15px_30px_50px_rgba(0,0,0,0.5)] scale-[1.15]  z-[10]
+    }
+    .box .list .imgBx{
+        @apply relative w-[60px] h-[60px] rounded-[10px] overflow-hidden mr-[10px]
+    }
+    .box .list .imgBx img{
+        @apply absolute top-0 left-0 w-full h-full object-cover
+    }
+    .box .list .content{
+        @apply flex flex-col justify-center text-[#fff]
+    }
+    .box .list .content .rank{
+        @apply absolute right-[-250px] text-[2em] text-[#03a9f4]  duration-[0.5s]  
+    }
+     .box .list .content .rank small{
+        @apply font-[500] opacity-[0.50]
+     }
+     .box .list:hover .content .rank{
+        @apply right-[20px] translate-x-[-25px] translate-y-[25px]
+     }
+     .box .list .content h4{
+        @apply leading-[1.2em] font-[600] duration-[0.5s]
+     }
+     .box .list .content p{
+        @apply text-[0.75em] duration-[0.5s]
+     }
+     .box .list:hover .content h4, .box .list:hover .content p{
+        @apply text-[#333]
+     }
+}
+
+
+
